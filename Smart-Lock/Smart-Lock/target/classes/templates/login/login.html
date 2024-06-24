@@ -1,0 +1,135 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        body {
+            background-image: url('images/bck.jpg'); /* Înlocuiește cu adresa imaginii tale */
+            background-size: cover;
+            background-position: center;
+            
+        }
+
+        .navbar {
+            background-color: rgba(52, 152, 219, 0.7); /* Am adăugat transparență la culoarea navbar-ului */
+            color: #fff;
+        }
+
+        .card-header {
+            background-color: rgba(52, 152, 219, 0.7); /* Am adăugat transparență la culoarea card-ului */
+            color: #fff;
+        }
+
+        .btn-primary {
+            background-color: rgba(52, 152, 219, 0.7); /* Am adăugat transparență la culoarea butonului */
+            border: none;
+        }
+
+            .btn-primary:hover {
+                background-color: rgba(33, 125, 187, 0.7); /* Am adăugat transparență la culoarea butonului la hover */
+            }
+
+        a {
+            color: rgba(52, 152, 219, 0.7); /* Am adăugat transparență la culoarea link-urilor */
+        }
+
+            a:hover {
+                color: rgba(33, 125, 187, 0.7); /* Am adăugat transparență la culoarea link-urilor la hover */
+            }
+
+        /* Adăugat stiluri pentru iconițele Font Awesome */
+        .fa-spin {
+            animation: spin 2s infinite linear;
+        }
+
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+
+    <title>Login</title>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light navbar-laravel">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sistem de Control Acces</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                    aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="/login/register">Inregistreaza-te</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main class="login-form">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <div class="card">
+                        <div class="card-header">
+                            <i class="fas fa-sign-in-alt"></i> Login
+                        </div>
+                        <div class="card-body">
+                            <form action="/login" method="post" id="loginForm">
+                                <div class="form-group row">
+                                    <label for="username" class="col-md-4 col-form-label text-md-right">
+                                        E-Mail
+                                        Address
+                                    </label>
+                                    <div class="col-md-5">
+                                        <input type="text" id="username" class="form-control" name="username" required
+                                               autofocus>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <label for="password" name="password" class="col-md-4 col-form-label text-md-right">Parola</label>
+                                    <div class="col-md-5">
+                                        <input type="password" id="password" class="form-control" name="password" required>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <!-- Adăugat o animație de învârtire pentru butonul de login -->
+                                        <button type="submit" class="btn btn-primary" id="loginButton">
+                                            <i class="fas fa-sign-in-alt fa-spin"></i> Logare
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <div class="form-group row">
+                                    <div class="col-md-6 offset-md-4">
+                                        <!-- Linkul pentru parola uitată -->
+                                        <a href="/forgot_password">Am uitat parola</a>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Adăugat scripturile Bootstrap, jQuery și Font Awesome pentru funcționalitate și stilizare -->
+    <script src="https://code.jquery.com/jquery-3.6.4.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8J+7dKwSc5e8T00j1PqsVxe/EK2Slmo4LRT4qDp8qrX4rR5DZJ5xjKZVO1Wn" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script>
+</body>
+</html>

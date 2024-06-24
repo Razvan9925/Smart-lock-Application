@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Adaugă link-ul către Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-image: url('../login/images/bck.jpg'); /* Înlocuiește cu adresa imaginii tale */
+            background-size: cover;
+            background-position: center;
+            padding-top: 2rem; /* Am adăugat spațiu între bara de navigație și conținut */
+        }
+
+        .container {
+            background-image: url('../login/images/bck.jpg');
+            background-size: cover;
+            background-position: center;
+            padding: 20px;
+            border-radius: 10px; /* Adăugat colțuri rotunjite pentru container */
+            margin-top: 50px; /* Spațiu între container și restul conținutului */
+            text-align: center; /* Centrare text pe orizontală */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: 100vh; /* Centrare text pe verticală */
+        }
+
+        h2 {
+            color: #333; /* Culorea textului pentru contrast cu fundalul */
+        }
+
+        .btn-secondary {
+            background-color: #3498db; /* Albastru asemănător cu site-ul precedent */
+            border: none;
+            margin-top: 10px; /* Spațiu între butoane */
+        }
+
+            .btn-secondary:hover {
+                background-color: #217dbb; /* Albastru mai închis la hover */
+            }
+    </style>
+</head>
+<body>
+
+    <div class="container mt-5">
+        <div class="row justify-content-center">
+            <div class="col text-center">
+                <h2>Sistem de Control Acces</h2>
+
+                <a th:href="@{/dashboard/open}" type="button" class="btn btn-secondary">
+                    Open
+                </a>
+
+                <a th:href="@{/dashboard/close}" type="button" class="btn btn-secondary">
+                    Close
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Adaugă script-ul Bootstrap JavaScript și jQuery (necesare pentru funcționalitatea Bootstrap) -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <!-- Adaugă script-ul tău pentru gestionarea funcționalității butoanelor -->
+
+</body>
+</html>
